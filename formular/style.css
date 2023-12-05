@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Kanit:wght@500&display=swap');
+
+:root {
+    --font: 'Kanit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form select,
+form input[type="number"],
+form input[type="submit"] {
+    width: 300px;
+    height: 25px;
+}
+
+form * {
+    margin-top: 5px !important;
+}
+
+.cars-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.car-box {
+    flex: 0 0 calc(33.33% - 40px);
+    height: 800px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(54, 54, 235);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-box p {
+    color: rgb(231, 231, 231);
+    margin: 8px 0;
+}
+
+.car-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: -100px;
+}
+
+.model {
+    font-size: 48px;
+}
+
+.cena {
+    font-size: 36px;
+}
+
+.show-cars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto !important;
+    position: relative;
+}
+
+.show-cars input[type="submit"], .add-car-button {
+    border: none;
+    background-color: rgb(54, 54, 235);
+    color:rgb(231, 231, 231);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:auto !important;
+}

@@ -12,13 +12,23 @@
     die("Connection failed: " . $conn->connect_error);
     }
 ?>
-<form action="prispevky.php" method="get">
+<head>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<form class="show-cars" action="prispevky.php" method="get">
 <Label>Vyber značku</Label>
 <select name="znacka">
-    <option value="1">Ford</option>
-    <option value="2">Toyota</option>
+    <option value="1">Toyota</option>
+    <option value="2">Ford</option>
     <option value="3">Opel</option>
 </select>
-<input type="submit" value="Zobrazit">
+<input type="submit" value="Zobrazit"></input>
+
+</form>
+<br>
+<a href="admin.php"><button class="add-car-button">Přidat nové auto</button></a>
 
 </form>
