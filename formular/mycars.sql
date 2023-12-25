@@ -1,6 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
+-- Autor: Radim Pokorny
 --
 -- Počítač: 127.0.0.1
 -- Vytvořeno: Pát 24. lis 2023, 14:11

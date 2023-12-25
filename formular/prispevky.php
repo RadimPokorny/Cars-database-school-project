@@ -42,23 +42,29 @@ function getCars($id) {
     $stmt->execute();
     $result = $stmt->get_result(); // get the mysqli result
 
+    $znacka = $_GET["znacka"];
+
     if ($result !== false && ($result->num_rows > 0)) {
 
         echo '<div class="cars-box">';
 
         while ($row = $result->fetch_row()) {
 
+            $array = array($row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $znacka);
+
             echo'<div class="car-box">';
             echo '<img src="' . $row[3] . '"></img>'; //Obrázek
             echo '<p class="model">'.$row[11]. ' ' . $row[4] . '</p>'; //Model auta
             echo '<p>Datum výroby: ' . $row[1] . '</p>';
-            echo '<p>Výkon [W]: ' . $row[5] . '</p>';
-            echo '<p>Typ paliva: ' . $row[6] . '</p>';
-            echo '<p>Počet dveří: ' . $row[7] . '</p>';
-            echo '<p>Barva auta: ' . $row[8] . '</p>';
-            echo '<p>Počet ujetých KM: ' . $row[9] . '</p>';
-            echo '<p>Typ převodovky: ' . $row[10] . '</p>';
             echo '<p class="cena" >Cena: ' . $row[2] . '</p>'; //Cena
+            echo '
+                <form method="post" action="newpage.php">
+                <input type="hidden" name="car_data[]" value="' . implode(',', $array) . '"/>
+                <input type="hidden" name="znacka" value="'.$znacka.'"/>
+                <input type="submit" name="submit" value="Víc info" /> 
+                </form>
+            
+            ';
 
             
             echo '</div>';
